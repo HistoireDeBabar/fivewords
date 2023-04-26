@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+
+# sst
+.sst
+.build
+
+# misc
+.DS_Store
+
+# local env files
+.env*.local
+.vscode
+
+# Ignoring this as it currently contains parameters from
+# SSM that include sensitive information.
+cdk.context.json

@@ -1,0 +1,165 @@
+:root {
+  font-family: 'Heebo', sans-serif;
+  line-height: 1.5;
+  font-weight: 200;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255);
+  background-color: #141414;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding-top: 12%;
+  min-width: 320px;
+}
+
+h1 {
+  font-size: 3.5em;
+  line-height: 1.1;
+  font-family: 'Trirong', serif;
+  font-weight: 200;
+  text-shadow: 1px 4px 20px #3f3f3f96;
+}
+
+h1.swell {
+  font-size: 3.5em;
+  text-align: center;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+h1.shrink {
+  font-size: 2.5em;
+  text-align: center;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+button {
+  border-radius: 12px;
+  border: 2px solid rgba(188, 126, 39, 0.9);
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  font-weight: 400;
+  color: #141414;
+  font-family: 'Heebo', sans-serif;
+  background-color:  rgba(224, 152, 52, 0.9);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(188, 126, 39, 0.9);
+  border-color: #141414;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+button:disabled {
+  cursor:wait
+}
+
+input {
+  border:none;
+  background-color: inherit;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: 'Trirong', serif;
+  font-size: x-large;
+}
+
+input:focus,
+input:focus-visible {
+  outline: none;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.App {
+  animation: fadeInAnimation ease-out 1s;
+}
+
+.App p {
+  animation: fadeInAnimation ease-out 1s;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+.App-Input {
+  padding: 5%;;
+}
+
+.App-Result {
+  min-height: 100px;
+  font-size: 2.5em;
+  animation: fadeInAnimation ease-out 1s;
+}
+
+.loader {
+  margin: auto;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  border-top-color: rgba(188, 126, 39, 0.9);
+  width: 80px;
+  height: 80px;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffebb0;
+  }
+  h1 {
+    text-shadow: 1px 4px 20px #21354796;
+  }
+  input {
+    color: #213547;
+  }
+  button {
+    background-color: #213547;
+    border-color: #213547;
+    color:rgba(255, 255, 255, 0.9)
+  }
+  button:hover {
+    background-color: #1b2b39;
+    border-color: #ffebb0;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  .loader {
+    border-top-color:#1b2b39
+  }
+}
+
